@@ -1,0 +1,17 @@
+{
+   "name": "gmailoji",
+   "manifest_version": 2,
+   "version": "1.0",
+   "default_locale": "en",
+   "background": {
+      "scripts": [ "extension.js", "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "messenger.js", "ajaxer.js", "extension.js", "appender.js", "bootstrap.js", "bridge.js" ],
+      "matches": [ "https://mail.google.com/*", "http://mail.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "permissions": [
+      "https://wadetandy.github.io/emoji-server/*"
+   ]
+}
